@@ -127,7 +127,7 @@ section {
 
 /*What We Do*/
 .intro {
-    text-align: center;
+    text-align: center;    
 }
 
 .intro p {
@@ -135,7 +135,7 @@ section {
     color: #39a6b2;
     width: 80%;
     font-size: 20px;
-    /*margin: 0 auto; (can also be used to center a block <100% wide*/
+    margin: 0 auto;
 }
 
 .steps {
