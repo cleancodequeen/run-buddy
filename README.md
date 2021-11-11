@@ -12,3 +12,5 @@ https://cleancodequeen.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Clean Code Queen
+
+#Run Buddy Inc.
