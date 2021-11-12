@@ -123,7 +123,32 @@ section {
     padding: 10px 20px;
     font-size: 16px;
 }
+
+.hero-cta {
+    float: left;
+    width: 65%;
+    text-align: end;
+    margin: 0 auto;
+}
+
+.hero-cta h1 {
+    font-size: 50px;
+    color:#fce138;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.hero-cta p {
+    color: #fff;
+    width: 50%;
+    text-align: end;
+    float: right;
+}
+
+
 /*Hero Styles End*/
+
+
 
 /*What We Do*/
 .intro {
