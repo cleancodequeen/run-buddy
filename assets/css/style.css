@@ -356,23 +356,14 @@ section {
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 980px) {
-    header h1 a {
-        /* this will be applied on any screen smalller than 980px */
 
-    }
 }
 
 @media screen and (max-width: 768px) {
-  header h1 {
-    /*this will be applied on any screen between 768 and 575px */
 
-  }
 }
 
 /* media query for mobile phones and smaller */
 @media screen and (max-width: 575px) {
-  header h1 {
-    /* this will be applied on any screen smaller than 575px */
 
-  }
 }
