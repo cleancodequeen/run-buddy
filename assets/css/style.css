@@ -1,3 +1,12 @@
+/*CSS Variables*/
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
+
+
+/*Body Styles*/
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +14,7 @@
 }
 
 body {
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
 
 }
@@ -13,7 +22,7 @@ body {
 header {
     /*apply styles to <header> */
     padding: 20px 35px;
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -24,6 +33,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 
 header h1 {
@@ -68,7 +78,7 @@ footer {
 }
 
 footer h2 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 30px;
     margin: 0;
 }
@@ -80,7 +90,7 @@ footer div {
 }
 
 footer a {
-    color: #024e76;
+    color: var(--secondary-color);
 }
 
 section {
@@ -116,10 +126,10 @@ section {
 
 /*Hero Form*/
 .hero-form {
-    border: 3px solid #024e76;
+    border: 3px solid var(--secondary-color);
     background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 40%;
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -138,24 +148,24 @@ section {
 
 
 .form-input {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
-    background-color: rgba(252, 225, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .form-input:focus {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     background-color: rgba(255, 255, 255, 1);
@@ -163,7 +173,7 @@ section {
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-    background-color: rgba(255, 255, 255, .85);
+    background-color: rgba(255, 255, 255, .50);
 }
 
 .hero-form label {
@@ -172,7 +182,7 @@ section {
 
 .hero-form button {
     color: #fce138;
-    background-color: #024e76;
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -181,7 +191,69 @@ section {
 
 .hero-form button:hover {
     color: #fce138;
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
+}
+
+.checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+
+.radio-wrapper label::before {
+    border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+
+.checkbox-wrapper label::after {
+    content: "";
+    height: 6px;
+    width: 14px;
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    position:absolute;
+    left: -26px;
+    top: 1px;
+    transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
+    content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+    content: "";
+}
+/*My personal style addition, not in the lession*/
+.radio-wrapper input:checked + label  {
+    font-weight: bold;
 }
 /*Hero Styles End*/
 
@@ -192,7 +264,7 @@ section {
 
 .intro p {
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
@@ -217,11 +289,11 @@ section {
 }
 
 .step:not(:last-child) {
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
 }
 
 .step h3 {
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 46px;
     flex: 1 30%;
 }
@@ -249,17 +321,17 @@ section {
 .step-text h4 {
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
 }
 
 .step-text p {
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 18px;
 }
 
 .section-title {
     font-size: 55px;
-    color: #024e76;
+    color: var(--secondary-color);
     border-bottom: 3px solid;
     padding-bottom: 20px;
     text-align: center;
@@ -272,7 +344,7 @@ section {
 }
 
 .secondary-border {
-    border-color: #39a6b2;
+    border-color: var(--tertiary-color);
 }
 
 .trainers {
@@ -286,7 +358,7 @@ section {
 .trainer {
     margin: 20px;
     flex: 1;
-    background: #024e76;
+    background: var(--secondary-color);
     color: #fce138;
 }
 
@@ -327,7 +399,7 @@ section {
 }
 /*REACH OUT STYLES START*/
 .contact {
-    background-color: #024e76;
+    background-color: var(--secondary-color);
 }
 
 .contact h2 {
@@ -371,13 +443,13 @@ section {
 }
 
 .contact-form input, .contact-form textarea {
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     display: block;
     padding: 7px 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -388,7 +460,7 @@ section {
     border: none;
     border-radius: 10px;
     background: #fce138;
-    color: #024e76;
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
@@ -396,7 +468,7 @@ section {
 
 .contact-form button:hover {
     color: #fce138;
-    background: #39a6b2;
+    background: var(--tertiary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
@@ -441,7 +513,7 @@ header nav ul li a {
 
     header nav ul li a:hover {
         background: #fce138;
-        color: #024e76;
+        color: var(--secondary-color);
         border-radius: 15px;
         text-shadow: none;
     }
